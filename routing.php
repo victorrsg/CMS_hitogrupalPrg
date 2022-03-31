@@ -1,6 +1,9 @@
 <?php
 $controllers = array(
-    'developer' => ['index', 'register', 'save', 'show', 'updateshow', 'update', 'delete', 'error', 'contacto']
+    'developer' => ['index', 'register', 'save', 'show','login','updateshow', 'update', 'delete', 'error', 'contacto']
+
+    //que al llamar a register llame a login y te loguee directamente -> 
+
 );
 
 if (array_key_exists($controller, $controllers)) {
