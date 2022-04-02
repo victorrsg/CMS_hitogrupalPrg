@@ -33,7 +33,7 @@ class DeveloperController{
         $conexion=$base->getConnect();
 
         //praparar la query
-        $usuario = $conexion->prepare('select * from usuarios where email = ? and contraseña = ?;');
+        $usuario = $conexion->prepare('select * from developers where email = ? and contraseña = ?;');
         $usuario->execute([$email, $passw]);
         $datos_usu = $usuario->fetch(PDO::FETCH_OBJ);
 
@@ -41,7 +41,6 @@ class DeveloperController{
         if($usuario->rowCount()){
 
             setcookie('developer', $datos_usu->nom_usuario,time()+10000);
-
             var_dump($_COOKIE['developer']);
 
             echo "te has logueado";
@@ -57,6 +56,7 @@ class DeveloperController{
         }
     }
 
+    //comprueba si hay algun usuario con creenciales iguales y en caso de que no , te lo guarda en la abse de datos
     function save(){
         //guardar el email y la contraseña para luego ver si existe el usuario
         $email = $_POST['email'];
@@ -67,7 +67,7 @@ class DeveloperController{
         $conexion=$base->getConnect();
 
         //praparar la query
-        $usuario = $conexion->prepare('select * from usuarios where email = ? OR nom_usuario = ?;');
+        $usuario = $conexion->prepare('select * from developers where email = ? OR nom_usuario = ?;');
         $usuario->execute([$email, $nom]);
         $datos_usu = $usuario->fetch(PDO::FETCH_OBJ);
 
@@ -96,6 +96,8 @@ class DeveloperController{
             printf("<script> window.location='?controller=developer&action=register';</script>");
         }
     }
+
+
 
 
 }// Cierra clase
