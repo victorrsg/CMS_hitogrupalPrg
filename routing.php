@@ -1,8 +1,6 @@
 <?php
 $controllers = array(
-    'developer' => ['index', 'register', 'save', 'show','loginshow','login','updateshow', 'update', 'delete', 'error', 'contacto']
-
-    //que al llamar a register llame a login y te loguee directamente -> 
+    'developer' => ['index', 'blog','register', 'save', 'show','loginshow','login','updateshow', 'update', 'delete', 'error', 'contacto']
 
 );
 

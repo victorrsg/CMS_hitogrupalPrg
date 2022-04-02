@@ -3,7 +3,7 @@ require_once('connection.php');
 class DeveloperController{
 
     function index(){
-        require_once('Views/Developer/pag.php');
+        require_once('Views/Developer/entrada.php');
     }
 
     //te manda a la vista de error
@@ -46,7 +46,7 @@ class DeveloperController{
             echo "te has logueado";
 
             //te manda a la pagina para crear
-            //require_once('');
+            require_once('Views/Developer/entrada.php');
 
             exit();
         }
@@ -83,7 +83,7 @@ class DeveloperController{
             var_dump($_COOKIE['developer']);
 
             //te manda a la pagina para crear
-            //require_once('');
+            require_once('Views/Developer/entrada.php');
 
             exit();
         }
@@ -97,7 +97,9 @@ class DeveloperController{
         }
     }
 
-
+    function blog(){
+        require_once('Views/Developer/blog.php');
+    }
 
 
 }// Cierra clase

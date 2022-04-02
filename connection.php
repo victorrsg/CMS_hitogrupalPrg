@@ -4,7 +4,7 @@
     class DB{
 
         public static function getconnect(){
-            $conexion=new PDO('pgsql:host=localhost;port=5432;dbname=test;user=postgres;password=curso');
+            $conexion=new PDO('pgsql:host=localhost;port=5432;dbname=grupal;user=postgres;password=curso');
             //conecta correctamente
             //var_dump($conexion);
             return $conexion;

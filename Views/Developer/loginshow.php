@@ -18,7 +18,6 @@
                 <a href="hacia atrás"><input type="button" class="btn btn-outline-success" name="submitBtnReg" value="Volver"></a>
                 <input type="submit" class="btn btn-success" name="submitLogin" value="Iniciar Sesión">
             </form>
-
         </div>
     </div>
 </div>

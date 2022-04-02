@@ -1,0 +1,17 @@
+.ocultar{
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
+
+#error{
+    padding: 10px;
+    background-color: rgba(228, 98, 98, 0.7);
+}
+
+#ok{
+    padding: 10px;
+    background-color: rgb(98, 228, 115, 0.7);
+}
