@@ -1,1 +1,1 @@
-<?php
+<h2>ESTAS EN ERROR</h2>

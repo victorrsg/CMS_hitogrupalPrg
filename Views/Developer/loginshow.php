@@ -5,7 +5,7 @@
         <div class='card col-4 py-3'>
             <h3 class='m-2'>Iniciar Sesión</h3><hr>
 
-            <form action="ir a comprobar" method="post" class='p-3'>
+            <form action="?controller=developer&action=login" method="post" class='p-3'>
 
                 <label>email :
                 <input class="form-control" type="text" name="email" Required>

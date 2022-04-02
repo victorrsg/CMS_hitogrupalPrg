@@ -6,7 +6,7 @@
         <div class='card col-4 py-3'>
         <h3 class='m-2'>Registrarse</h3><hr>
 
-        <form action="ir a save" method="post" class='p-3'>
+        <form action="?controller=developer&action=save" method="post" class='p-3'>
             <label>Usuario :
             <input class="form-control" type="text" name="nom_usuario" Required> 
             </label><br>
