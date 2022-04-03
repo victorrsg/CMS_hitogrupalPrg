@@ -1,7 +1,8 @@
-<h2>estas en entrada </h2>
-<p>formulario para crear</p>
+<h2>CREA UNA ENTRADA</h2>
 
-<form action="?controller=developer&action=blog" method="post" class='p-3'>
+<h2>hola <?php echo $_COOKIE['developer']?>, que vas a crear hoy?</h2>
+
+<form action="?controller=blog&action=create" method="post" class='p-3'>
 
   <!-- elegir el titulo de la entrada --> 
   <div class="mb-3">

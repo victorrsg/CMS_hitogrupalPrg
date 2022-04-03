@@ -16,7 +16,6 @@
         <?php require_once('header.php')?>
     </header>
 
-    <h1>ACCESO A DATOS CON MVC</h1>
 
     <section>
         <?php require_once('routing.php'); ?>

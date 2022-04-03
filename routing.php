@@ -1,6 +1,7 @@
 <?php
 $controllers = array(
-    'developer' => ['index', 'blog','register', 'save', 'show','loginshow','login','updateshow', 'update', 'delete', 'error', 'contacto']
+    'developer' => ['index', 'register', 'save', 'show','loginshow','login','updateshow', 'update', 'delete', 'error', 'contacto'],
+    'blog' => ['create', 'blog', 'entradashow']
 
 );
 
@@ -23,6 +24,11 @@ function call($controller, $action)
             require_once('Models/Developer.php');
             $controller = new DeveloperController();
             break;
+        case 'blog':
+            require_once('Models/Blog.php');
+            $controller = new BlogController();
+            break;
+
         default:
             # code...
             break;

@@ -6,6 +6,26 @@ class DeveloperController{
         require_once('Views/Developer/entrada.php');
     }
 
+    function update(){
+        require_once('Views/Developer/update.php');
+    }
+    
+    function updateshow(){
+        $id=$_POST['id'];
+        $titulo=$_POST['titulo'];
+        $info=$_POST['info'];
+        $imagen=$_POST['imagen'];
+        $fecha=$_POST['fecha'];
+        $autor=$_POST['autor'];
+
+        $conexion=DB::getConnect();
+        $insertar=$conexion->query("UPDATE BLOGS set titulo='$titulo', info='$info',fecha='$fecha', imagen='$imagen',autor='$autor' where id='$id'");
+
+        require_once('Views/developer/entrada.php');
+
+        //require_once('Views/Developer/entrada.php');
+    }
+
     //te manda a la vista de error
     function error(){
         require_once('Views/Developer/error.php');
@@ -52,7 +72,7 @@ class DeveloperController{
         }
         else{
             printf("<script type='text/javascript'>alert('Credenciales incorrectas'); </script>");
-            printf("<script> window.location='?controller=developer&action=login';</script>");
+            printf("<script> window.location='?controller=developer&action=loginshow';</script>");
         }
     }
 
@@ -97,9 +117,8 @@ class DeveloperController{
         }
     }
 
-    function blog(){
-        require_once('Views/Developer/blog.php');
-    }
+
+
 
 
 }// Cierra clase
